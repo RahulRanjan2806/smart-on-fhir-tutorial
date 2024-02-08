@@ -19062,7 +19062,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
             console.error(
               `BBClient fullSessionStorageSupport: ${BBClient.settings.fullSessionStorageSupport}`
             );
-            console.error(`sessionStorage: ${sessionStorage}`);
+            console.error(`sessionStorage:`, sessionStorage);
             if (
               BBClient.settings.fullSessionStorageSupport &&
               sessionStorage.tokenResponse
