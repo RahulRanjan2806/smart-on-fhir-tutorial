@@ -6944,8 +6944,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               return objects.join(" ");
             }
 
+            console.error(`arguments in global`);
+            console.log(arguments);
             var i = 1;
             var args = arguments;
+            console.log("args:");
+            console.log(args);
             var len = args.length;
             var str = String(f).replace(formatRegExp, function (x) {
               if (x === "%%") return "%";
