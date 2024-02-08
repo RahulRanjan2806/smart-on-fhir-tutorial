@@ -18830,6 +18830,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           }
 
           function completeTokenFlow(hash) {
+            console.error("CompelteTokenFlow Input arg:");
+            console.log(hash);
             if (!hash) {
               hash = window.location.hash;
             }
@@ -18855,6 +18857,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           }
 
           function completeCodeFlow(params) {
+            console.error("completeCodeFlow params input:");
+            console.log(params);
+            console.error("Adapter:");
+            console.log(Adapter.get());
             if (!params) {
               params = {
                 code: urlParam("code"),
@@ -19097,6 +19103,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
             // decide between token flow (implicit grant) and code flow (authorization code grant)
             var isCode = urlParam("code") || (args.input && args.input.code);
+
+            console.error(`isCode: ${isCode}`);
 
             var accessTokenResolver = null;
 
